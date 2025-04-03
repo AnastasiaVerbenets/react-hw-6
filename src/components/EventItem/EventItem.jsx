@@ -1,5 +1,6 @@
 import { formatEventDuration, formatEventStart } from 'utils';
 import { Item, Title, Text } from './EventItem.styled';
+import PropTypes from 'prop-types';
 
 import { FaLocationDot, FaRegClock } from 'react-icons/fa6';
 import { IoMdPerson } from 'react-icons/io';
@@ -39,4 +40,12 @@ export const EventItem = ({ name, start, end, location, speaker }) => {
       </ul>
     </Item>
   );
+};
+
+EventItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  start: PropTypes.string.isRequired,
+  end: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  speaker: PropTypes.string.isRequired,
 };
