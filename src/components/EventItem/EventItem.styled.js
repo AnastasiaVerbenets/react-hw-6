@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Item = styled.li`
- width: calc(25% - 20px); 
- margin: 10px;
+  width: calc(25% - 20px); 
+  margin: 10px;
   padding: 15px;
   background-color:rgb(220, 228, 252);
   border: 1px solid #e0e0e0;

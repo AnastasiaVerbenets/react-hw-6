@@ -7,6 +7,5 @@ export const List = styled.ul`
   justify-content: center;
   padding: 20px;
   background-color:rgb(242, 242, 242);
-  margin: 0;
 `;
 
