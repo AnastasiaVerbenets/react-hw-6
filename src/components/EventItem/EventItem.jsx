@@ -1,25 +1,42 @@
 import { formatEventDuration, formatEventStart } from 'utils';
+import { Item, Title, Text } from './EventItem.styled';
+
+import { FaLocationDot, FaRegClock } from 'react-icons/fa6';
+import { IoMdPerson } from 'react-icons/io';
+import { IoCalendarClear } from 'react-icons/io5';
 
 export const EventItem = ({ name, start, end, location, speaker }) => {
   const formatedStart = formatEventStart(start);
   const duration = formatEventDuration(start, end);
   return (
-    <li>
-      <h3>{name}</h3>
+    <Item>
+      <Title>{name}</Title>
       <ul>
         <li>
-          <p>{location}</p>
+          <Text>
+            <FaLocationDot />
+            {location}
+          </Text>
         </li>
         <li>
-          <p>{speaker}</p>
+          <Text>
+            <IoMdPerson />
+            {speaker}
+          </Text>
         </li>
         <li>
-          <p>{formatedStart}</p>
+          <Text>
+            <IoCalendarClear />
+            {formatedStart}
+          </Text>
         </li>
         <li>
-          <p>{duration}</p>
+          <Text>
+            <FaRegClock />
+            {duration}
+          </Text>
         </li>
       </ul>
-    </li>
+    </Item>
   );
 };
